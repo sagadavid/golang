@@ -1,0 +1,3 @@
+module barego
+
+go 1.17
