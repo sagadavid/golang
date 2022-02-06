@@ -147,7 +147,7 @@ numbers[0] = 3245
 fmt.Println(numbers) //?
 
 //////////////POINTER is *
-& refers to memory address not value
+//& refers to memory address not value
 
 value1 := 12
 pointer1 := &value1
