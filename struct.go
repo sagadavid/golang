@@ -29,7 +29,9 @@ func main() {
 	kangal.bark3Times()
 }
 
-///////METHOD TO CLASS...  first, pass in a receiver(h Hound).. and when it is passed a kopi is made.. its not a reference!!!
+///////METHOD TO CLASS...  first, pass THE CLASS/STRUCT as a receiver(h Hound)..
+//and when it is passed a kopi is made.. its not a reference!!!
+//and you can have a method to it.
 func (h Hound) Snakker() {
 	fmt.Println(h.HøresUt)
 }
@@ -37,4 +39,15 @@ func (h Hound) Snakker() {
 func (h Hound) bark3Times() {
 	h.HøresUt = fmt.Sprintf("%v %v %v", h.HøresUt, h.HøresUt, h.HøresUt)
 	fmt.Println(h.HøresUt)
+}
+
+
+
+/////////////STRUCT
+kangal := Hound{"Vanhedisi", 2}
+fmt.Println(kangal)
+fmt.Printf("%+v\n", kangal)
+fmt.Printf("Breed : %+v\nVeht : %+v\n", kangal.Breed, kangal.Vekt)
+kangal.Vekt = 3
+fmt.Printf("Breed : %+v\nVeht : %+v\n", kangal.Breed, kangal.Vekt)
 }
